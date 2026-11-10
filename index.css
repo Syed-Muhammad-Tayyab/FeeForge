@@ -1,0 +1,319 @@
+/* ==========================================================================
+   FeeForge — School Fee Invoice Generator
+   Developed by Syed Muhammad Tayyab
+   ========================================================================== */
+
+  body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 15px;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+      font-size: 1.5rem;
+    }
+
+    .form-container {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    .btn-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.9rem;
+      flex: 1;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: #3498db;
+      color: white;
+    }
+
+    .btn-success {
+      background-color: #2ecc71;
+      color: white;
+    }
+
+    .btn-dark {
+      background-color: #34495e;
+      color: white;
+    }
+
+    /* Invoice Styles */
+    .invoice-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      gap: 15px;
+    }
+
+    .invoice-pair {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 20px;
+      page-break-after: always;
+      gap: 15px;
+    }
+
+    .invoice {
+      width: 100%;
+      border: 2px solid black;
+      padding: 12px;
+      background: white;
+      box-sizing: border-box;
+      min-height: auto;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .header img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .school-name {
+      text-align: center;
+      flex: 1;
+      font-weight: bold;
+      font-size: 1rem;
+      min-width: 150px;
+      margin: 5px 0;
+    }
+
+    .info, .student-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      margin: 4px 0;
+    }
+
+    .info > div, .student-info > div {
+      min-width: 45%;
+      margin: 2px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 0.8rem;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 3px;
+      text-align: center;
+    }
+
+    .footer {
+      margin-top: 8px;
+      font-size: 0.8rem;
+    }
+
+    .footer p {
+      margin: 3px 0;
+    }
+
+    .signatures {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .sign-box {
+      width: 48%;
+      border: 1px solid black;
+      padding: 8px;
+      height: 50px;
+      min-width: 120px;
+      margin-bottom: 5px;
+    }
+
+    .preview-container {
+      margin-top: 20px;
+    }
+
+    .preview-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      .container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .invoice-container {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+
+      .invoice-pair {
+        display: flex !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        page-break-after: always !important;
+        gap: 0 !important;
+      }
+
+      .invoice {
+        width: 49% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 5mm !important;
+        border: 1px solid #000 !important;
+        page-break-inside: avoid !important;
+      }
+
+      @page {
+        size: A4 landscape;
+        margin: 5mm;
+      }
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+      .invoice {
+        width: calc(50% - 10px);
+      }
+
+      .btn {
+        flex: none;
+      }
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+      .container {
+        padding: 20px;
+      }
+
+      .form-container {
+        padding: 25px;
+      }
+
+      .invoice {
+        padding: 15px;
+      }
+
+      .header img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .school-name {
+        font-size: 1.2rem;
+      }
+
+      .info, .student-info {
+        font-size: 0.9rem;
+      }
+
+      table {
+        font-size: 0.9rem;
+      }
+
+      .footer {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+      .invoice {
+        height: 180mm;
+      }
+    }
+
+/* ---- FeeForge branding ---- */
+h2 .tagline {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #7f8c8d;
+  letter-spacing: .5px;
+  margin-top: 2px;
+}
+
+.app-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  padding: 18px 0 6px;
+}
