@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520" font-family="Segoe UI,Arial,sans-serif">
+  <rect width="900" height="520" rx="14" fill="#f5f5f5"/>
+  <rect width="900" height="36" rx="14" fill="#e3e8ee"/><circle cx="22" cy="18" r="6" fill="#ff5f56"/><circle cx="42" cy="18" r="6" fill="#ffbd2e"/><circle cx="62" cy="18" r="6" fill="#27c93f"/>
+  <text x="450" y="76" text-anchor="middle" font-size="24" font-weight="700" fill="#2c3e50">FeeForge</text>
+  <text x="450" y="96" text-anchor="middle" font-size="12" fill="#7f8c8d">School Fee Invoice Generator</text>
+  <rect x="40" y="112" width="820" height="320" rx="8" fill="#fff" stroke="#e1e5ea"/>
+  <g font-size="12" fill="#333">
+    <text x="60" y="140" font-weight="600">School Name</text><rect x="60" y="148" width="360" height="28" rx="4" fill="#fff" stroke="#ddd"/><text x="70" y="167">Rahma Public School</text>
+    <text x="480" y="140" font-weight="600">School Logo</text><rect x="480" y="148" width="360" height="28" rx="4" fill="#fff" stroke="#ddd"/><text x="490" y="167" fill="#888">Choose file…</text>
+    <text x="60" y="204" font-weight="600">Date</text><rect x="60" y="212" width="360" height="28" rx="4" fill="#fff" stroke="#ddd"/><text x="70" y="231">09-11-2026</text>
+    <text x="480" y="204" font-weight="600">Starting Voucher No</text><rect x="480" y="212" width="360" height="28" rx="4" fill="#fff" stroke="#ddd"/><text x="490" y="231">01</text>
+    <text x="60" y="268" font-weight="600">Student Names (one per line)</text><rect x="60" y="276" width="360" height="72" rx="4" fill="#fff" stroke="#ddd"/><text x="70" y="296">Minash Fatima</text><text x="70" y="314">Student2</text><text x="70" y="332">Student3</text>
+    <text x="480" y="268" font-weight="600">Father Names (one per line)</text><rect x="480" y="276" width="360" height="72" rx="4" fill="#fff" stroke="#ddd"/><text x="490" y="296">Farhan</text><text x="490" y="314">Father2</text><text x="490" y="332">Father3</text>
+  </g>
+  <rect x="60" y="376" width="260" height="38" rx="4" fill="#3498db"/><text x="190" y="400" text-anchor="middle" fill="#fff" font-size="14" font-weight="600">Generate Invoice</text>
+  <rect x="340" y="376" width="240" height="38" rx="4" fill="#2ecc71"/><text x="460" y="400" text-anchor="middle" fill="#fff" font-size="14" font-weight="600">Download PDF</text>
+  <rect x="600" y="376" width="240" height="38" rx="4" fill="#34495e"/><text x="720" y="400" text-anchor="middle" fill="#fff" font-size="14" font-weight="600">Print Invoice</text>
+  <text x="450" y="490" text-anchor="middle" font-size="12" fill="#7f8c8d">Developed by Syed Muhammad Tayyab</text>
+</svg>

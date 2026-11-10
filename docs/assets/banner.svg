@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1b2d"/><stop offset=".55" stop-color="#2c3e50"/><stop offset="1" stop-color="#1b6ca8"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2ecc71"/><stop offset="1" stop-color="#3498db"/>
+    </linearGradient>
+    <style>
+      .t{font-family:'Segoe UI',Tahoma,Arial,sans-serif}
+      .float{animation:f 6s ease-in-out infinite}
+      .float2{animation:f 8s ease-in-out infinite reverse}
+      @keyframes f{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+      .glow{animation:g 3s ease-in-out infinite}
+      @keyframes g{0%,100%{opacity:.55}50%{opacity:1}}
+      .slide{stroke-dasharray:640;stroke-dashoffset:640;animation:s 3s ease forwards .4s}
+      @keyframes s{to{stroke-dashoffset:0}}
+    </style>
+  </defs>
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <g opacity=".12" stroke="#fff"><path d="M0 60H1200M0 120H1200M0 180H1200M0 240H1200"/><path d="M100 0V320M300 0V320M500 0V320M700 0V320M900 0V320M1100 0V320"/></g>
+  <circle class="float" cx="1040" cy="90" r="70" fill="#3498db" opacity=".25"/>
+  <circle class="float2" cx="140" cy="250" r="55" fill="#2ecc71" opacity=".22"/>
+  <circle class="float" cx="880" cy="250" r="30" fill="#fff" opacity=".08"/>
+  <g class="float2" transform="translate(930 70) rotate(8)">
+    <rect width="150" height="190" rx="12" fill="#fff" opacity=".95"/>
+    <rect x="14" y="16" width="122" height="14" rx="3" fill="#2c3e50"/>
+    <g fill="#bdc3c7"><rect x="14" y="48" width="90" height="8" rx="3"/><rect x="14" y="66" width="110" height="8" rx="3"/><rect x="14" y="84" width="76" height="8" rx="3"/><rect x="14" y="102" width="100" height="8" rx="3"/></g>
+    <rect x="14" y="128" width="122" height="22" rx="4" fill="url(#gold)"/>
+    <path d="M100 168l12 12 24-28" stroke="#2ecc71" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="600" y="48" text-anchor="middle" class="t" font-size="18" fill="#9fd3ff" letter-spacing="4">DEVELOPED BY SYED MUHAMMAD TAYYAB</text>
+  <text x="80" y="170" class="t" font-size="96" font-weight="800" fill="#fff">Fee<tspan fill="url(#gold)">Forge</tspan></text>
+  <path class="slide" d="M84 192H620" stroke="url(#gold)" stroke-width="5" stroke-linecap="round"/>
+  <text x="84" y="236" class="t" font-size="26" fill="#ecf0f1">School Fee Invoice Generator</text>
+  <text class="t glow" x="84" y="274" font-size="18" fill="#9fd3ff">Bulk vouchers  •  Amount in words  •  Print &amp; PDF  •  100% in-browser</text>
+</svg>

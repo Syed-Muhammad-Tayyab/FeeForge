@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+# Editors
+.vscode/
+.idea/
+*.swp
+# Node / tooling
+node_modules/
+npm-debug.log*
+# Generated
+*.pdf
+dist/
+.env
